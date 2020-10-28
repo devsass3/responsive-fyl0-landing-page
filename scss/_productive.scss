@@ -1,0 +1,50 @@
+.productive {
+
+    &-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 50px;
+        align-items: center;
+        max-width: 600px;
+        margin: 0 auto;
+
+        @include breakpoint(large) {
+            grid-template-columns: repeat(2, 1fr);
+            max-width: 1320px;
+        }
+    }
+
+    &-image {
+        text-align: center;
+
+        img {
+            width: 100%;
+            max-width: 615px;
+        }
+    }
+    
+    &-text {
+
+        h2 {
+
+            @include breakpoint(large){
+                max-width: 400px;
+            }
+        }
+
+        a {
+            background-image: url('/images/icon-arrow.svg');
+            background-repeat: no-repeat;
+            background-position: right center;
+            color: $ctaCyan;
+            padding-right: 25px;
+            border-bottom: 1px solid $ctaCyan;
+            transition: all 200ms ease-in-out;
+
+            &:hover {
+                color: $ctaPink;
+                border-bottom: 1px solid $white;
+            }
+        }
+    }
+}

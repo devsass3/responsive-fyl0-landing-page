@@ -1,0 +1,32 @@
+// Fonts
+$font-title: 'Raleway', sans-serif;
+$font-body: 'Open Sans', sans-serif;
+
+// Colors
+$introBg: #1c2431;
+$mainBg: #181f2a;
+$footerBg: #0b1523;
+$testimonialBg: #202a3c;
+$ctaCyan: #65e2d9;
+$ctaPink: #d89dfa;
+$white: #ffffff;
+
+// Borders
+$border-radius: 10px;
+$border-radius-circle: 30px;
+
+// Breakpoints
+$breakpoints: (
+    small: 499px,
+    medium: 699px,
+    large: 999px,
+    xlarge: 1399px,
+);
+
+@mixin breakpoint ($size) {
+    $breakpoint-value: map-get($breakpoints, $size);
+
+    @media screen and (min-width: $breakpoint-value){
+        @content;
+    }
+}

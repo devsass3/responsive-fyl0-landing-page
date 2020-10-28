@@ -1,0 +1,44 @@
+button, .button {
+    border: none;
+    border-radius: $border-radius-circle;
+    padding: 15px 10px;
+    width: 100%;
+    text-align: center;
+    background: linear-gradient(to right, $ctaCyan, $ctaPink);
+    color: $introBg;
+    font-size: 0.65em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 600ms ease-in;
+
+    @include breakpoint(medium){
+      max-width: 200px;
+    }
+
+    &:hover {
+      color: $introBg;
+      background: $ctaPink;
+    }
+
+    &--large {
+      @extend .button;
+      padding: 20px;
+
+      @include breakpoint(medium){
+        max-width: 285px;
+      }
+    }
+}
+
+input {
+  font-family: $font-body;
+}
+
+input[type="text"], input[type="email"] {    
+  outline: none;
+  border: none;
+  border-radius: $border-radius-circle;    
+  font-size: 0.9rem;    
+  color: $footerBg;
+  padding: 17px 40px;
+}
